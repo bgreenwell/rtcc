@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+
+# Quarto build artifacts
+/.quarto/
+paper/.quarto/
+paper/paper.tex
+paper/paper_files/
+paper/paper.html
+paper/arxiv.sty
+paper/orcidlink.sty
+
+# The second write-up is under anonymous review and is deliberately kept out of
+# version control: this repository is public under the author's name, so
+# publishing the blinded manuscript here would identify its author. Restore by
+# deleting this entry once the review concludes. See AGENTS.md.
+paper/short/
+
+# Editorial reviews: kept locally, not published. They discuss the manuscript
+# that is under anonymous review.
+reviews/
+
+# arXiv submission bundle (regenerable)
+paper/arxiv-submission.tar.gz
+
+# Reading companion for the preprint, kept local
+WALKTHROUGH.md
+WALKTHROUGH.pdf
+WALKTHROUGH.html
+
+# Downloaded papers: copyrighted, and not ours to redistribute.
+references/

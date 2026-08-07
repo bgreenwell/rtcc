@@ -1,0 +1,46 @@
+[project]
+name = "rtcc"
+version = "0.1.0"
+description = "Probability that a random triangle with vertices on three concentric circles is obtuse."
+readme = "README.md"
+authors = [
+    { name = "Brandon M. Greenwell", email = "greenwell.brandon@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0.0",
+    "scipy>=1.10.0",
+]
+
+[project.scripts]
+rtcc = "rtcc.cli:main"
+
+[project.urls]
+Repository = "https://github.com/bgreenwell/rtcc"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.0",
+    "jupyter-client>=8.9.1",
+    "matplotlib>=3.9.0",
+    "nbclient>=0.11.0",
+    "nbformat>=5.10.4",
+    "psutil>=7.2.2",
+    "pytest>=8.0.0",
+    "pyyaml>=6.0.3",
+    "ruff>=0.6.0",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
