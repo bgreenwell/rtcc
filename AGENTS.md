@@ -139,8 +139,3 @@ researcher, not that the work is correct.
   in the preprint and before the bibliography in the second write-up, and it is
   deliberately *not* guarded by `\ifshowauthor`: it identifies nobody and
   referees should see it.
-
-  The disclosure is a statement of research integrity, so it has to keep pace
-  with what actually happens. If the division of labour changes, update the
-  wording to match rather than leaving it stale, and do not narrow it to sound
-  better than the record supports. The repository is the record.
