@@ -40,7 +40,21 @@ uv run python figures.py               # regenerate fig1/fig2 (PDF + EPS)
 pdflatex random-triangles && bibtex random-triangles && pdflatex random-triangles
 ```
 
-## arXiv submission
+## arXiv
+
+**Posted as [arXiv:2608.06591](https://arxiv.org/abs/2608.06591)**
+(doi:10.48550/arXiv.2608.06591), 6 August 2026, primary `math.PR`. Further
+uploads are *replacements*, not new submissions.
+
+Two things bite on every replacement. arXiv re-runs compiler autodetection on
+each upload and picks `xelatex`, which fails: `\setmainfont{Latin Modern Roman}`
+is live under that engine, the font does not resolve, and the build emits a PDF
+with the math destroyed and a page missing rather than failing outright. **Set
+the compiler to `pdflatex` every time.** And put a `v2:` note in the Comments
+field saying what changed.
+
+No cross-lists were added at submission. `math.HO` and `math.MG` are both
+defensible if you ever want them on a replacement.
 
 `paper/arxiv-submission.tar.gz` is the upload bundle, gitignored and
 regenerable: `paper.tex` plus `arxiv.sty`, `orcidlink.sty`, and the figure PDFs
@@ -66,14 +80,13 @@ cross-lists; MSC codes are printed in the paper itself. The abstract is about
 1300 characters against a 1920 limit and pastes in unmodified, light TeX
 included.
 
-A first submission may need an endorsement for the primary category, though an
-institutional address often carries one automatically; check before going
-looking for an endorser, and do not request a code until one is lined up, since
-codes expire. Endorsement certifies that the submitter is a legitimate
-researcher, not that the work is correct.
+Endorsement for `math.PR` was obtained for the first submission and is not
+needed again.
 
 ## Notes
 
+- **Status: submitted, with the editor, awaiting a first decision** (as of
+  10 August 2026). Review typically runs three to six months.
 - **`paper/short/` is untracked on purpose.** It is under anonymous review,
   and this repository is public under the author's name, so committing the
   blinded manuscript would identify its author. It is gitignored as a directory;
@@ -110,13 +123,14 @@ researcher, not that the work is correct.
   `github.com`; the author build must contain all of them and must not contain
   `Author withheld`.
 
-  The `arXiv:XXXX.XXXXX` placeholder is in both and stays until the identifier
-  exists. The two Khamis citations are live in both write-ups: citing published
-  work is not self-identifying, and only naming the man as an advisor would be.
-  In particular, posting the preprint supplies a real identifier and with it the
-  temptation to fill that placeholder in. Do not: the citation would lead a
-  referee to a preprint carrying the author's name. The identifier goes in with
-  the other three restorations, not before.
+  **The `arXiv:XXXX.XXXXX` placeholder stays even though the identifier now
+  exists.** It is `arXiv:2608.06591`. Filling it in would take a referee
+  straight from the blinded manuscript to a preprint carrying the author's name,
+  which is the one thing the whole arrangement is meant to prevent. It goes in
+  with the other four restorations after a provisional accept, not before.
+
+  The two Khamis citations are live in both write-ups: citing published work is
+  not self-identifying, and only naming the man as an advisor would be.
 - Both write-ups import `rtcc`, the Quarto chunks in `paper.qmd` and
   `figures.py`, so both build only inside the project environment (`uv run`).
 - The LaTeX build must run from `paper/short/`: it resolves its style file and

@@ -57,8 +57,26 @@ exactly zero, as above. Compare against a tolerance, not `== 0`.
 
 ## Documentation
 
-The derivation, its special cases, and the simulation study are in
-`paper/paper.qmd`; render it with `uv run quarto render paper/paper.qmd`.
+The preprint is on arXiv:
+[Random Triangles on Concentric Circles](https://arxiv.org/abs/2608.06591)
+([doi:10.48550/arXiv.2608.06591](https://doi.org/10.48550/arXiv.2608.06591)).
+It carries the derivation, the special cases, the local-maximum expansion, and
+the simulation study.
+
+Its source is `paper/paper.qmd`; render it with
+`uv run quarto render paper/paper.qmd`.
+
+```bibtex
+@misc{greenwell2026rtcc,
+  author        = {Greenwell, Brandon M.},
+  title         = {Random Triangles on Concentric Circles},
+  year          = {2026},
+  eprint        = {2608.06591},
+  archivePrefix = {arXiv},
+  primaryClass  = {math.PR},
+  doi           = {10.48550/arXiv.2608.06591}
+}
+```
 
 ## Development
 
